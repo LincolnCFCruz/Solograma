@@ -1,0 +1,70 @@
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.box {
+   padding: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+}
+h1 {
+    padding: 0;
+    text-align: left;
+    background: 0;
+    border-bottom: 1px solid #aaa;
+    color: black;
+    padding-top: 0.5em;
+    padding-bottom: 0.17em;
+    font-size: 18px;
+    font-weight: normal;
+    width: 85%;
+    border-width: 100%;
+    margin-left: 10%;
+}
+.container img {
+    max-width:500px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+    margin-right: 25%;
+}
+.body {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.howto {
+    width: 85%;
+    margin-left: 10%;
+}
+.verticalLine {
+    border-left: thick solid #aaa;
+    border-width: 100%;
+    text-align: right; 
+}
+.page-container {
+    margin: 0 auto;
+    text-align: left;
+    width: 83%;
+}
+button {
+    width: 100px;
+}
+table{ 
+    background: lightblue; 
+    border-color: black; 
+    border-style: solid; 
+    width: 280px;
+    
+}
+th{
+    background: #666; 
+    color: white;
+}
+
+
+
+
