@@ -1,13 +1,46 @@
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+.container-all{
+    position: relative;
+    top: 0;
+    padding: 0;
+    width: 100%;
 }
-.box {
-   padding: 0;
-   margin-top: 0;
-   margin-bottom: 0;
+
+.logo {
+    position: absolute;
+    left: 37.5%;
+    width: 30%;
+    top: 0;
+}
+
+.tamanho-nonograma {
+    position: absolute;
+    left: 12.5%;
+    width: 75%;
+    padding-top: 200px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.como-jogar{
+    position: absolute;
+    left: 12.5%;
+    width: 75%;
+    padding-top: 500px;
+    text-align: start;
+}
+.img-como-jogar {
+   position: relative;
+   top: 100%;
+   left: 45%;
+   width: 20%;
+}
+
+.placar{
+    position: absolute;
+    /* left: 81%;  */
+    right: 0;
+    top: 0;
 }
 h1 {
     padding: 0;
@@ -21,21 +54,19 @@ h1 {
     font-weight: normal;
     width: 85%;
     border-width: 100%;
-    margin-left: 10%;
+    margin-left: 10%;   
 }
-.container img {
-    max-width:500px;
-    max-height:150px;
-    width: auto;
-    height: auto;
-    margin-right: 25%;
+
+.vertical {
+    position: absolute;
+    top: 100%;
+    /* left: 86.31%; */
+    left: 0;
+    height: 400%;
+    border-right: 1px solid #aaa;
 }
-.body {
-    padding: 0;
-    margin-top: 0;
-    margin-bottom: 30px;
-    text-align: center;
-}
+
+
 .howto {
     width: 85%;
     margin-left: 10%;
@@ -50,21 +81,18 @@ h1 {
     text-align: left;
     width: 83%;
 }
+
 button {
     width: 100px;
 }
+
 table{ 
     background: lightblue; 
     border-color: black; 
     border-style: solid; 
-    width: 280px;
-    
+    width: 12.5%; 
 }
 th{
     background: #666; 
     color: white;
 }
-
-
-
-
