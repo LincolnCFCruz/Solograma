@@ -1,0 +1,14 @@
+.square {
+    width: 90px; 
+    height: 90px;
+    margin: auto;
+}
+
+button { 
+    width: 90px; 
+    height: 90px;
+    font-size: 5em;
+    background-color: #F5CDAA;
+    border: none;
+    border-radius: 5px;
+}

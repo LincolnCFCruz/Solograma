@@ -11,6 +11,7 @@ import { HeaderComponent } from './header/header.component';
 import { HomeComponent } from './home/home.component';
 import { GanhouComponent } from './ganhou/ganhou.component';
 import { CountUpTimerComponent } from './count-up-timer/count-up-timer.component';
+import { SquareComponent } from './square/square.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CountUpTimerComponent } from './count-up-timer/count-up-timer.component
     HeaderComponent,
     HomeComponent,
     GanhouComponent,
-    CountUpTimerComponent
+    CountUpTimerComponent,
+    SquareComponent
   ],
   imports: [
     BrowserModule,

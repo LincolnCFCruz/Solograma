@@ -1,42 +1,54 @@
-<div class="tamanho-nonograma">
-    <div> <router-outlet></router-outlet>
-      <h1>Nonogramas</h1>
-      <div >
-        <p style="margin-right: 40%">
-          <button type="button" class="btn btn-success btn-lg" routerLink="/5x5">5x5</button> &nbsp;
-          <button type="button" class="btn btn-warning btn-lg" routerLink="/10x10">10x10</button>
-        </p>
-        <p style="margin-right: 40%">
-          <button type="button" class="btn btn-danger btn-lg" routerLink="/15x15">15x15</button> &nbsp;
-          <button type="button" class="btn btn-dark btn-lg" routerLink="/desafio">Desafio</button>
-        </p>
-        <table class="placar">
-          <div class="vertical"></div>
-          <h3>Scoreboard</h3>
-          <tr>
-            <th>Nome</th>
-            <th>Pontos</th>
-          </tr>
-          <tr>
-            <td>Pedro</td>
-            <td>300</td>
-          </tr>
-          <tr>
-            <td>Lucas</td>
-            <td>260</td>
-          </tr>
-        </table>
-      </div>
-    </div>
-    <div class="como-jogar">
-      <h1>Como jogar</h1>
-      <p class="howto">
-        Neste jogo, o objetivo é pintar os quadrados de acordo tanto com a coluna quanto com a linha. Cada sequência
-        de números indica a quantidade de quadrados a serem pintados, seguidos de pelo menos 1 espaço em branco. Por
-        exemplo:
-      </p>
-      <div>
-        <img src="https://i.ibb.co/kKxcJjL/puzzle-nonograms.png" alt="puzzle-nonograms" class="img-como-jogar">
-      </div>
-    </div>
+<h1>Nonogramas</h1>
+
+<div class=menu>
+  <div class="wrapper">
+    <button type="button" class="btn1" routerLink="/5x5">5x5</button>
+    <button type="button" class="btn2" routerLink="/10x10">10x10 (INOP)</button>
+    <button type="button" class="btn3" routerLink="/15x15">15x15 (INOP)</button>
+    <button type="button" class="btn4" routerLink="/desafio">Desafio (INOP)</button>
   </div>
+  
+  <div class="score">
+    <table cellspacing="0">
+      <tr>
+        <th>Nome</th>
+        <th>Pontos</th>
+      </tr>
+      <tr>
+        <td>Adler</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>Maria</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>Lincoln</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>Sabrina</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>Jamily</td>
+        <td>---</td>
+      </tr>
+      <tr>
+        <td>Matheus</td>
+        <td>---</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<h1>Como jogar</h1>
+
+<div class="footer">      
+  <p class="howto">
+    Neste jogo, o objetivo é pintar os quadrados de acordo tanto com a coluna quanto com a linha. Cada sequência
+    de números indica a quantidade de quadrados a serem pintados, seguidos de pelo menos 1 espaço em branco. Por
+    exemplo:</p>
+
+  <img src="https://i.ibb.co/kKxcJjL/puzzle-nonograms.png" alt="puzzle-nonograms">
+</div>

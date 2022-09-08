@@ -1,5 +1,10 @@
-<p>count-up-timer works!</p>
-<span>{{min}}:</span>
-<span>{{sec}}</span>
-<button (click)="start()">start</button>
-<button (click)="stop()">stop</button>
+<div class="counter">
+    <div class="clock">
+        <span>{{min}}:</span>
+        <span>{{sec}}</span>
+    </div>
+    <div class="clock-menu">
+        <button (click)="start()">start</button>
+        <button (click)="stop()">stop</button>
+    </div>
+</div>

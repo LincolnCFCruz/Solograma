@@ -1,4 +1,16 @@
-.logo{
+.navbar{
+    background-color: rgb(136,186,233);
+  }
+  
+  .navbar img{
     height: 80px;
     width: 250px;
+  }
+
+@media screen and (max-width: 850px){
+    .navbar img{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
 }

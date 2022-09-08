@@ -1,0 +1,27 @@
+.counter{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.clock {
+    width: 100px;
+    align-content: center;
+    text-align: center;
+}
+
+.clock-menu{
+    width: 100px;
+    display: flex;
+    text-align: center;
+    position: relative;
+    grid-gap: 5px;
+}
+
+.clock-menu button{
+    width: 50px;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
