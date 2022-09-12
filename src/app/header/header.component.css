@@ -2,10 +2,14 @@
     background-color: rgb(136,186,233);
   }
   
-  .navbar img{
-    height: 80px;
-    width: 250px;
-  }
+.navbar img{
+  height: 80px;
+  width: 250px;
+}
+
+.navbar button{
+  border: none;
+}
 
 @media screen and (max-width: 850px){
     .navbar img{
