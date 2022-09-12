@@ -13,7 +13,6 @@ export class Nonograma5x5Component implements OnInit {
   countPassUser: number;
   countPassTotal: number;
 
-
   constructor(private _router: Router) { }
 
   ngOnInit(): void {
@@ -29,7 +28,7 @@ export class Nonograma5x5Component implements OnInit {
 
   verify(idx: number) {
     if (this.squares[idx] == 1) {
-      this.countPassUser ++;
+      this.countPassUser ++; 
     }
     else{
       window.alert("ERROU!");
