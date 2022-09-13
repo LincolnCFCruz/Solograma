@@ -1,3 +1,15 @@
-<app-count-up-timer></app-count-up-timer>
+<div class="main-page">
+    <h1>Matriz 15x15</h1>
+    
+    <app-count-up-timer></app-count-up-timer>
+    
+    <div class = "matriz">
+        <app-square 
+            *ngFor="let val of squares; let i = index"
+            (click)="verify(i)"> 
+        </app-square>
+    </div>
+    
+    <h1></h1>
+</div>
 
-<p>nonograma15x15 works!</p>
