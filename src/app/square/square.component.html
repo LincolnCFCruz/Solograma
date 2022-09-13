@@ -1,3 +1,5 @@
 <div class="square">
-    <button nbButton *ngIf="!value">{{ value }}</button>
+    <button
+    [style.background-color]="toggle ? 'white' : 'black'"
+    (click)="enableDisableRule()"></button>
 </div>

@@ -15,7 +15,7 @@ const routes: Routes=[
   {path: '15x15', component:Nonograma15x15Component},
   {path: 'desafio', component:NonogramaDesafioComponent},
   {path: 'ganhou', component: GanhouComponent},
-  {path: 'timer', component: CountUpTimerComponent}
+  {path: 'timer', component: CountUpTimerComponent} 
 ];
 
 @NgModule({

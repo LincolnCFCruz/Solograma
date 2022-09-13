@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { timeInterval } from 'rxjs';
 
 @Component({
   selector: 'app-nonograma5x5',
@@ -8,11 +9,10 @@ import { Router } from '@angular/router';
 })
 export class Nonograma5x5Component implements OnInit {
   squares: number[];
-  xIsNext: boolean;
   countError: number;
   countPassUser: number;
   countPassTotal: number;
-
+  squaresPassed: number[];
 
   constructor(private _router: Router) { }
 
@@ -22,6 +22,7 @@ export class Nonograma5x5Component implements OnInit {
 
   newGame() {
     this.squares = [1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0]
+    this.squaresPassed = [];
     this.countError = 0;
     this.countPassTotal = 6;
     this.countPassUser = 0;
@@ -29,12 +30,19 @@ export class Nonograma5x5Component implements OnInit {
 
   verify(idx: number) {
     if (this.squares[idx] == 1) {
-      this.countPassUser ++;
+      if(!this.squaresPassed.includes(idx)){
+        this.countPassUser ++;
+      }
     }
     else{
       window.alert("ERROU!");
       this.countError ++;
     }
+    
+    if (!this.squaresPassed.includes(idx)){
+      this.squaresPassed.push(idx);
+    }
+
     this.calculateWinner()
   }
 
