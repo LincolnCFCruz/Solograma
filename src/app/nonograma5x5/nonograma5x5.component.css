@@ -6,7 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.main-page h1{
+.main-page h1 {
     border-bottom-style: solid;
     width: 90%;
     margin-left: 5%;
@@ -14,15 +14,77 @@
     margin-bottom: 10px;
 }
 
+.table {
+    width: 100%;
+}
+
+.game{
+    width: 70%;
+    margin: auto;
+}
+
+/* .top {
+    width: 0px;
+    margin: 10px auto;
+}
+
+.bottom {
+    display: flex;
+    width: 0px;
+    margin: -10px auto;
+} */
+
 .matriz {
-    width: 600px;
+    /* width: 600px; */
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    grid-auto-flow: row;
+    /* margin-left: auto; */
+    /* margin-right: auto;  */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* padding: 10px; */
+}
+
+.table{
+    padding: 0% 0%;
+}
+
+.task-top {
+    /* position: absolute;
+    top: 69px;
+    left: 10px; */
+    display: grid;
+    grid-template-columns: repeat(5, 100px);
+    /* row-gap: 20px;
+    column-gap: 20px; */
+    grid-auto-flow: row;
+    /* margin-left: -244px; */
+    padding: 10px;
+
+}
+
+.task-left {
     display: grid;
     grid-template-rows: repeat(5, 100px);
-    grid-gap: 10px;
+    /* row-gap: 10px;
+    column-gap: 20px; */
     grid-auto-flow: column;
-    margin-left: auto;
-    margin-right: auto; 
+    /* margin-right: auto; */
+    /* padding: 10px; */
+    /* margin-left: -356px; */
+
+}
+
+.task-cell {
+    display: flex;
     align-items: center;
-    align-content: center;
-    padding: 10px;
+    justify-content: center;
+    font-family: Tahoma;
+    font-size: 40px;
+    width: 90px;
+    height: 90px;
+    border-radius: 5px;
+    /* margin: auto; */
+    background-color: gray;
 }

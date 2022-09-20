@@ -9,6 +9,8 @@ import { timeInterval } from 'rxjs';
 })
 export class Nonograma5x5Component implements OnInit {
   squares: number[];
+  upperHeaderValues: number[]
+  leftHeaderValues: number[]
   countError: number;
   countPassUser: number;
   countPassTotal: number;
@@ -22,6 +24,8 @@ export class Nonograma5x5Component implements OnInit {
 
   newGame() {
     this.squares = [1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0]
+    this.upperHeaderValues = [0,2,0,2,0,1,1,5,1,1]
+    this.leftHeaderValues = [0,3,0,1,0]
     this.squaresPassed = [];
     this.countError = 0;
     this.countPassTotal = 6;
@@ -52,11 +56,27 @@ export class Nonograma5x5Component implements OnInit {
       }
 
     if (this.countError >= 3){
-      if (confirm("Você perdeu, deseja reiniciar?"))
+      if (confirm("Você perdeu, deseja reiniciar?")){
         this.newGame()
-      else{
+        window.location.reload()
+      }else{
         this._router.navigate(['/']);
       }
+    }
+  }
+  printUpperHeaderValues(idx: number){
+    if(this.upperHeaderValues[idx] != 0){
+      return this.upperHeaderValues[idx];
+    }else{
+      return null;
+    }
+  }
+
+  printLeftHeaderValues(idx: number){
+    if(this.leftHeaderValues[idx] != 0){
+      return this.leftHeaderValues[idx];
+    }else{
+      return null;
     }
   }
 }

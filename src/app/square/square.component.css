@@ -4,9 +4,9 @@
     margin: auto;
 }
 
-button { 
+.button1 { 
     width: 90px; 
     height: 90px;
     font-size: 5em;
-    border-radius: 5px;
+    border-radius: 5px;    
 }
