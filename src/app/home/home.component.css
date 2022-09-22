@@ -34,20 +34,20 @@ h1{
     font-size: 16px;
 }
   
-.wrapper .btn1{
-    background-color: #F5CDAA;
-}
-  
-.wrapper .btn2{
-    background-color: #CFB495;
+.wrapper .btn4{
+    background-color: #012E40;
 }
   
 .wrapper .btn3{
-    background-color: #758184;
+    background-color: #024959;
 }
   
-.wrapper .btn4{
-    background-color: #5D5B6A;
+.wrapper .btn2{
+    background-color: #026773;
+}
+  
+.wrapper .btn1{
+    background-color: #3CA6A6;
 }
   
 .score {
@@ -60,7 +60,7 @@ h1{
     height: 285px;
     table-layout: fixed;
     border-radius: 5px;
-    background: lightblue; 
+    background: lightgray; 
     text-align: center;
 }
   
