@@ -1,3 +1,28 @@
-<app-count-up-timer></app-count-up-timer>
+<div class="main-page">
+    <h1>Matriz 15x15</h1>
+    
+    <app-count-up-timer></app-count-up-timer>
+    <div class="table">
+        <div class="top">
+            <div class="task-top">
+                <div class="task-cell" *ngFor="let val of upperHeaderValues; let i = index">
+                    {{printUpperHeaderValues(i)}}
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="task-left">
+                <div class="task-cell" *ngFor="let val of leftHeaderValues; let i = index">
+                    {{printLeftHeaderValues(i)}}
+                </div>
+            </div>
+            <div class="matriz">
+                <app-square *ngFor="let val of squares; let i = index" (click)="verify(i)">
+                </app-square>
+            </div>
+        </div>
+    </div>
+    
+    <h1></h1>
+</div>
 
-<p>nonograma-desafio works!</p>

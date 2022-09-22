@@ -6,7 +6,7 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.main-page h1 {
+.main-page h1{
     border-bottom-style: solid;
     width: 90%;
     margin-left: 5%;
@@ -15,24 +15,20 @@
 }
 
 .table {
-    width: 60%;
-    margin:  auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .top {
-    width: 200px;
-    margin: auto;
-    /* margin-right: auto; */
+    width: 0px;
+    margin: 10px auto;
 }
 
 .bottom {
-    width: 380px;
-    /* margin: auto auto 0 auto; */
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
-    align-content: center;
-    align-items: center;
+    width: 0px;
+    margin: auto;
 }
 
 .matriz {
@@ -49,6 +45,7 @@
     grid-template-columns: repeat(5, 56px);
     grid-gap: 2px;
     grid-auto-flow: row;
+    margin-left: -138px;
 }
 
 .task-left {
@@ -56,7 +53,10 @@
     grid-template-rows: repeat(5, 40px);
     grid-gap: 2px;
     grid-auto-flow: column;
-
+    /* margin-right: auto; */
+    /* padding: 10px; */
+    margin-left: -185px;
+    
 }
 
 .task-cell {
