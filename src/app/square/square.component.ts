@@ -9,8 +9,11 @@ import { Nonograma5x5Component } from '../nonograma5x5/nonograma5x5.component'
 
 export class SquareComponent  {
   toggle = true;
+  x=true; 
+  
 
   enableDisableRule() {
       this.toggle = !this.toggle;
   }
+  
 }

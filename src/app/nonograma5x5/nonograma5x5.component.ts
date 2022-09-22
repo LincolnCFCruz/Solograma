@@ -23,11 +23,11 @@ export class Nonograma5x5Component implements OnInit {
   }
 
   newGame() {
-    this.squares = [0,0,0,0,0,
-                    0,0,0,0,0,
-                    0,0,0,0,0,
-                    0,0,0,0,0,
-                    0,0,0,0,0]
+    this.squares = [0,0,1,0,0,
+                    0,1,1,0,1,
+                    1,1,1,1,1,
+                    0,1,1,0,1,
+                    0,0,1,0,0]
     this.upperHeaderValues = [
       0,2,0,2,0,
       1,1,5,1,1]
@@ -36,7 +36,7 @@ export class Nonograma5x5Component implements OnInit {
     ]
     this.squaresPassed = [];
     this.countError = 0;
-    this.countPassTotal = 6;
+    this.countPassTotal = 13+(2*this.countError);
     this.countPassUser = 0;
   }
 
@@ -47,7 +47,7 @@ export class Nonograma5x5Component implements OnInit {
       }
     }
     else{
-      window.alert("ERROU!");
+      window.alert("ERROU! Desmarque a célula!");
       this.countError ++;
     }
     
@@ -63,7 +63,7 @@ export class Nonograma5x5Component implements OnInit {
       this._router.navigate(['/ganhou'])
       }
 
-    if (this.countError >= 3){
+    if (this.countError > 11){
       if (confirm("Você perdeu, deseja reiniciar?")){
         this.newGame()
         window.location.reload()
