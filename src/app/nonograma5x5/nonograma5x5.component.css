@@ -15,64 +15,47 @@
 }
 
 .table {
-    width: 100%;
+    width: 60%;
+    margin:  auto;
 }
 
-.game{
-    width: 70%;
+.top {
+    width: 200px;
     margin: auto;
-}
-
-/* .top {
-    width: 0px;
-    margin: 10px auto;
+    /* margin-right: auto; */
 }
 
 .bottom {
+    width: 380px;
+    /* margin: auto auto 0 auto; */
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
-    width: 0px;
-    margin: -10px auto;
-} */
-
-.matriz {
-    /* width: 600px; */
-    display: grid;
-    grid-template-columns: repeat(5, 100px);
-    grid-auto-flow: row;
-    /* margin-left: auto; */
-    /* margin-right: auto;  */
-    /* align-items: center; */
-    /* align-content: center; */
-    /* padding: 10px; */
+    align-content: center;
+    align-items: center;
 }
 
-.table{
-    padding: 0% 0%;
+.matriz {
+    display: grid;
+    grid-template-rows: repeat(5, 40px);
+    grid-gap: 2px;
+    grid-auto-flow: column;
+    align-items: center;
+    align-content: center;
 }
 
 .task-top {
-    /* position: absolute;
-    top: 69px;
-    left: 10px; */
     display: grid;
-    grid-template-columns: repeat(5, 100px);
-    /* row-gap: 20px;
-    column-gap: 20px; */
+    grid-template-columns: repeat(5, 56px);
+    grid-gap: 2px;
     grid-auto-flow: row;
-    /* margin-left: -244px; */
-    padding: 10px;
-
 }
 
 .task-left {
     display: grid;
-    grid-template-rows: repeat(5, 100px);
-    /* row-gap: 10px;
-    column-gap: 20px; */
+    grid-template-rows: repeat(5, 40px);
+    grid-gap: 2px;
     grid-auto-flow: column;
-    /* margin-right: auto; */
-    /* padding: 10px; */
-    /* margin-left: -356px; */
 
 }
 
@@ -81,10 +64,9 @@
     align-items: center;
     justify-content: center;
     font-family: Tahoma;
-    font-size: 40px;
-    width: 90px;
-    height: 90px;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 5px;
-    /* margin: auto; */
     background-color: gray;
 }

@@ -25,7 +25,7 @@ export class Nonograma5x5Component implements OnInit {
   newGame() {
     this.squares = [1,0,0,0,0,1,1,1,0,0,0,0,0,0,0,1,0,0,0,0,1,0,0,0,0]
     this.upperHeaderValues = [0,2,0,2,0,1,1,5,1,1]
-    this.leftHeaderValues = [0,3,0,1,0]
+    this.leftHeaderValues = [0,3,0,1,0,0,0,0,0,0]
     this.squaresPassed = [];
     this.countError = 0;
     this.countPassTotal = 6;

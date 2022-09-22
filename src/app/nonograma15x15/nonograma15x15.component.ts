@@ -8,6 +8,8 @@ import { Router } from '@angular/router';
 })
 export class Nonograma15x15Component implements OnInit {
   squares: number[];
+  upperHeaderValues: number[]
+  leftHeaderValues: number[]
   xIsNext: boolean;
   countError: number;
   countPassUser: number;
@@ -36,6 +38,17 @@ export class Nonograma15x15Component implements OnInit {
       0,1,0,0,0,0,0,1,1,0,0,0,0,1,0,
       0,1,0,0,0,0,0,1,1,0,0,0,0,1,0,
       1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+    this.upperHeaderValues = 
+    [0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0]
+    this.leftHeaderValues = [0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0,
+      0,3,0,1,0,0,0,0,0,0,0,0,0,0,0]
     this.countError = 0;
     this.countPassTotal = 6;
     this.countPassUser = 0;
@@ -65,4 +78,21 @@ export class Nonograma15x15Component implements OnInit {
       }
     }
   }
+
+  printUpperHeaderValues(idx: number){
+    if(this.upperHeaderValues[idx] != 0){
+      return this.upperHeaderValues[idx];
+    }else{
+      return null;
+    }
+  }
+
+  printLeftHeaderValues(idx: number){
+    if(this.leftHeaderValues[idx] != 0){
+      return this.leftHeaderValues[idx];
+    }else{
+      return null;
+    }
+  }
+
 }

@@ -3,12 +3,14 @@
 
     <app-count-up-timer></app-count-up-timer>
     <div class="table">
-        <div class="game">
+        <div class="top">
             <div class="task-top">
                 <div class="task-cell" *ngFor="let val of upperHeaderValues; let i = index">
                     {{printUpperHeaderValues(i)}}
                 </div>
             </div>
+        </div>
+        <div class="bottom">
             <div class="task-left">
                 <div class="task-cell" *ngFor="let val of leftHeaderValues; let i = index">
                     {{printLeftHeaderValues(i)}}
