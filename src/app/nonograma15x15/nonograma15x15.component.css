@@ -1,69 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
 .main-page h1{
     border-bottom-style: solid;
     width: 90%;
     margin-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.table {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+.conteudo-jogo {
+    margin: auto;
 }
 
 .top {
-    width: 0px;
     margin: 10px auto;
+    width: 445px;
 }
 
 .bottom {
     display: flex;
-    width: 0px;
     margin: auto;
+    width: 895px;
 }
 
 .matriz {
     display: grid;
     grid-template-rows: repeat(15, 40px);
-    grid-gap: 2px;
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
     grid-auto-flow: column;
+    margin-left: 5px;
     align-items: center;
     align-content: center;
 }
 
 .task-top {
     display: grid;
-    grid-template-columns: repeat(15, 56px);
-    grid-gap: 2px;
+    grid-template-columns: repeat(15, 40px);
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
     grid-auto-flow: row;
-    margin-left: -344px;
 }
 
 .task-left {
     display: grid;
     grid-template-rows: repeat(15, 40px);
-    grid-gap: 2px;
-    grid-auto-flow: column;
-    /* margin-right: auto; */
-    /* padding: 10px; */
-    margin-left: -560px;
-    
+    grid-row-gap: 5px;
+    grid-column-gap: 5px;
+    grid-auto-flow: column; 
 }
 
 .task-cell {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: Tahoma;
     font-size: 30px;
     width: 40px;
     height: 40px;

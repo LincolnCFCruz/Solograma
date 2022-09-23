@@ -6,14 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './nonograma10x10.component.html',
   styleUrls: ['./nonograma10x10.component.css']
 })
+
 export class Nonograma10x10Component implements OnInit {
   squares: number[];
   upperHeaderValues: number[]
   leftHeaderValues: number[]
-  xIsNext: boolean;
   countError: number;
   countPassUser: number;
   countPassTotal: number;
+  squaresPassed: number[];
 
   constructor(private _router: Router) { }
 
@@ -33,38 +34,67 @@ export class Nonograma10x10Component implements OnInit {
       0,0,0,0,0,0,0,1,1,0,
       0,0,1,0,0,0,1,1,0,0,
       0,0,0,1,1,1,1,0,0,0]
+    
     this.upperHeaderValues = [0,1,0,1,0,1,1,5,1,1,
                               4,1,0,1,4,0,0,1,1,0,
                               3,5,9,5,4,3,2,2,2,4]
+
     this.leftHeaderValues = [0,0,1,0,0,0,0,0,0,0,
                              0,0,1,3,0,0,0,0,0,0,
                              1,0,1,1,1,3,5,6,0,0,
                              1,5,1,1,1,1,2,2,8,6]
+
+    this.squaresPassed = [];
     this.countError = 0;
-    this.countPassTotal = 52+(2*this.countError);
+    this.countPassTotal = 52;
     this.countPassUser = 0;
   }
 
   verify(idx: number) {
     if (this.squares[idx] == 1) {
-      this.countPassUser ++; 
+      if(!this.squaresPassed.includes(idx)){
+        this.squaresPassed.push(idx);
+        this.countPassUser++;
+      }
+      else {
+        var index = this.squaresPassed.indexOf(idx);
+        if (index !== -1) {
+          this.squaresPassed.splice(index, 1);
+        }
+        this.countPassUser--;
+      }
     }
+
     else{
-      window.alert("ERROU! Desmarque a célula!");
-      this.countError ++;
+      if(!this.squaresPassed.includes(idx)){
+        window.alert("ERROU! Desmarque a célula!");
+        this.squaresPassed.push(idx);
+        this.countError++;
+      }
+      else {
+        var index = this.squaresPassed.indexOf(idx);
+        if (index !== -1) {
+          this.squaresPassed.splice(index, 1);
+        }
+        this.countError--;
+      }
     }
+
     this.calculateWinner()
   }
 
-  calculateWinner(){
-    if (this.countPassUser == this.countPassTotal){
-      this._router.navigate(['/ganhou'])
+  calculateWinner(){  
+    if (this.countError == 0){
+      if (this.countPassUser == this.countPassTotal){
+        this._router.navigate(['/ganhou'])
       }
+    }
 
-    if (this.countError > 21){
-      if (confirm("Você perdeu, deseja reiniciar?"))
+    if (this.countError > 10){
+      if (confirm("Você perdeu, deseja reiniciar?")){
         this.newGame()
-      else{
+        window.location.reload()
+      }else{
         this._router.navigate(['/']);
       }
     }
@@ -85,5 +115,4 @@ export class Nonograma10x10Component implements OnInit {
       return null;
     }
   }
-
 }

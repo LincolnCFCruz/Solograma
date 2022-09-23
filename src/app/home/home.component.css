@@ -92,6 +92,7 @@ h1{
   }
   
   .footer img{
+    width: 200px;
     position: relative;
     align-items: center;
     margin-bottom: 10px;

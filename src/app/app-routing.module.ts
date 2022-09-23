@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CountUpTimerComponent } from './count-up-timer/count-up-timer.component';
 import { GanhouComponent } from './ganhou/ganhou.component';
+import { GanhouDesafioComponent } from './ganhou-desafio/ganhou-desafio.component';
 import { HomeComponent } from './home/home.component';
 import { NonogramaDesafioComponent } from './nonograma-desafio/nonograma-desafio.component';
 import { Nonograma10x10Component } from './nonograma10x10/nonograma10x10.component';
@@ -15,6 +16,7 @@ const routes: Routes=[
   {path: '15x15', component:Nonograma15x15Component},
   {path: 'desafio', component:NonogramaDesafioComponent},
   {path: 'ganhou', component: GanhouComponent},
+  {path: 'ganhou-desafio', component: GanhouDesafioComponent},
   {path: 'timer', component: CountUpTimerComponent} 
 ];
 

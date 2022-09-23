@@ -12,6 +12,7 @@ import { HomeComponent } from './home/home.component';
 import { GanhouComponent } from './ganhou/ganhou.component';
 import { CountUpTimerComponent } from './count-up-timer/count-up-timer.component';
 import { SquareComponent } from './square/square.component';
+import { GanhouDesafioComponent } from './ganhou-desafio/ganhou-desafio.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SquareComponent } from './square/square.component';
     HomeComponent,
     GanhouComponent,
     CountUpTimerComponent,
-    SquareComponent
+    SquareComponent,
+    GanhouDesafioComponent
   ],
   imports: [
     BrowserModule,

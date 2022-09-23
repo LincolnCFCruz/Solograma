@@ -6,14 +6,15 @@ import { Router } from '@angular/router';
   templateUrl: './nonograma15x15.component.html',
   styleUrls: ['./nonograma15x15.component.css']
 })
+
 export class Nonograma15x15Component implements OnInit {
   squares: number[];
   upperHeaderValues: number[]
   leftHeaderValues: number[]
-  xIsNext: boolean;
   countError: number;
   countPassUser: number;
   countPassTotal: number;
+  squaresPassed: number[];
 
   constructor(private _router: Router) { }
 
@@ -37,8 +38,8 @@ export class Nonograma15x15Component implements OnInit {
       0,1,0,0,0,1,0,1,1,0,1,1,0,0,1,
       0,1,0,0,0,0,1,0,1,0,0,0,0,0,1,
       0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,
-      1,0,0,0,0,0,0,0,1,0,0,0,0,0,1
-]
+      1,0,0,0,0,0,0,0,1,0,0,0,0,0,1]
+
     this.upperHeaderValues = 
     [ 0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,
       0,0,0,0,0,1,0,0,0,0,4,1,1,0,0,
@@ -51,31 +52,58 @@ export class Nonograma15x15Component implements OnInit {
       0,0,0,0,0,0,1,1,0 ,0,3,2,1,1,0,
       0,0,0,2,1,0,1,1,0 ,1,2,2,2,2,0,
       1,2,1,2,2,9,1,1,15,1,1,1,1,1,15]
+
+    this.squaresPassed = [];
     this.countError = 0;
-    this.countPassTotal = 225+(2*this.countError);
+    this.countPassTotal = 94;
     this.countPassUser = 0;
   }
 
   verify(idx: number) {
     if (this.squares[idx] == 1) {
-      this.countPassUser ++; 
+      if(!this.squaresPassed.includes(idx)){
+        this.squaresPassed.push(idx);
+        this.countPassUser++;
+      }
+      else {
+        var index = this.squaresPassed.indexOf(idx);
+        if (index !== -1) {
+          this.squaresPassed.splice(index, 1);
+        }
+        this.countPassUser--;
+      }
     }
+
     else{
-      window.alert("ERROU! Desmarque a célula!");
-      this.countError ++;
+      if(!this.squaresPassed.includes(idx)){
+        window.alert("ERROU! Desmarque a célula!");
+        this.squaresPassed.push(idx);
+        this.countError++;
+      }
+      else {
+        var index = this.squaresPassed.indexOf(idx);
+        if (index !== -1) {
+          this.squaresPassed.splice(index, 1);
+        }
+        this.countError--;
+      }
     }
+
     this.calculateWinner()
   }
 
-  calculateWinner(){
-    if (this.countPassUser == this.countPassTotal){
-      this._router.navigate(['/ganhou'])
+  calculateWinner(){   
+    if (this.countError == 0){
+      if (this.countPassUser == this.countPassTotal){
+        this._router.navigate(['/ganhou'])
       }
+    }
 
-    if (this.countError >= 31){
-      if (confirm("Você perdeu, deseja reiniciar?"))
+    if (this.countError > 15){
+      if (confirm("Você perdeu, deseja reiniciar?")){
         this.newGame()
-      else{
+        window.location.reload()
+      }else{
         this._router.navigate(['/']);
       }
     }
@@ -96,5 +124,4 @@ export class Nonograma15x15Component implements OnInit {
       return null;
     }
   }
-
 }
